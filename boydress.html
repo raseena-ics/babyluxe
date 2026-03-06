@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Baby Luxe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+ <style>
+    body {
+      padding-top: 70px;
+      background-color:secondary;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: #9b9b9b;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    /* Card Styling */
+    .card {
+  border: none;
+  border-radius: 15px;     /* Rounded card */
+  overflow: hidden;        /* Makes image follow border radius */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 400px;           /* Taller image like screenshot */
+  object-fit: cover;       /* Perfect fill */
+  display: block;
+}
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    /* Custom Navbar */
+.navbar-custom {
+  background: linear-gradient(to right, #ffd6e8, #ffe9f3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+/* Brand Style */
+.navbar-brand {
+  font-size: 26px;
+  color: #333 !important;
+}
+
+.brand-highlight {
+  color: #ff4f81;
+}
+
+/* Nav Links */
+.navbar-custom .nav-link {
+  color: #444 !important;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Hover Effect */
+.navbar-custom .nav-link:hover {
+  color: #ff4f81 !important;
+}
+
+/* Underline animation */
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #ff4f81;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.navbar-custom .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #ff4f81;
+  color: white;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #e83e6f;
+  color: white;
+}
+
+   .hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+
+  /* Flex center */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+ .footer {
+  background: linear-gradient(to right, #ffd6e8, #ffe9f3);
+  color: black;
+  padding: 60px 20px;   /* Increased padding */
+  text-align: center;
+  margin-top: 80px;
+  font-size: 18px;      /* Bigger text */
+}
+      .btn-custom {
+      background-color: darkgrey;
+      color: white;
+      border-radius: 30px;
+      padding: 8px 20px;
+    }
+     .btn-custom:hover {
+      background-color: black;
+      color: white;
+    }
+
+
+.product-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.wishlist-btn i {
+  color: #ff6b9d;
+  font-size: 18px;
+}
+
+.wishlist-btn:hover {
+  background: #ff6b9d;
+}
+
+.wishlist-btn:hover i {
+  color: white;
+}
+
+.hero-section {
+       background: linear-gradient(to right, #ffd6e8, #ffe9f3);
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+
+</style>
+
+  </style>
+
+<body>
+
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+  <div class="container">
+    
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold" href="#">
+      Baby <span class="brand-highlight">Luxe</span>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center gap-lg-4">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Collection</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+
+        <!-- Wishlist -->
+        <li class="nav-item position-relative">
+          <a class="nav-link" href="wishlist.html">
+            <i class="bi bi-heart fs-5"></i>
+            <span id="wishlist-count" class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">0</span>
+          </a>
+        </li>
+
+        <!-- Cart -->
+        <li class="nav-item position-relative">
+          <a class="nav-link" href="cart.html">
+            <i class="bi bi-cart fs-5"></i>
+            <span id="cart-count" class="badge bg-dark rounded-pill position-absolute top-0 start-100 translate-middle">0</span>
+          </a>
+        </li>
+
+        <!-- Login -->
+        <li class="nav-item">
+          <a href="login.html" class="btn btn-light rounded-pill px-4 ms-lg-3 login-btn">
+            <i class="bi bi-person"></i> Login
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <h1> Baby Boy Dresses</h1>
+    <p>Dress your little prince in style with our Little Gentleman Party Suit Set. Designed for comfort and elegance, this adorable outfit includes a soft shirt, stylish blazer, and matching trousers. Perfect for birthdays, weddings, and special occasions.</p>
+  
+</section>
+<br><br>
+
+
+  <div class="row g-4 justify-content-center">
+ <!---card1---> 
+ <div class="col-md-3">
+  <div class="card position-relative product-card">
+
+    <!-- Wishlist Icon (Top Right) -->
+ <button class="btn wishlist-btn"
+onclick="toggleWishlist(this, 'boy1', 'Bear Print Romper', '$40', 'boy1.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+    <img src="boy1.jpg" class="card-img-top" alt="Baby boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">Bear Print Romper </h5>
+      <p class="fw-bold text-muted">$50</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+        <button class="btn btn-outline-dark"
+onclick="addToCart('Bear Print Romper ', '$50', 'boy1.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+ <div class="col-md-3">
+  <div class="card position-relative product-card">
+
+    <!-- Wishlist Icon (Top Right) -->
+  <button class="btn wishlist-btn"
+onclick="toggleWishlist(this, 'boy2', 'Long Sleeved Shirt', '$40', 'boy2.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+
+    <img src="boy2.jpg" class="card-img-top" alt="Baby Boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">Long Sleeved Shirt</h5>
+      <p class="fw-bold text-muted">$40</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+        <button class="btn btn-outline-dark"
+onclick="addToCart('Long Sleeved Shirt', '$40', 'boy2.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <div class="col-md-3">
+  <div class="card position-relative product-card">
+
+
+    <!-- Wishlist Icon (Top Right) -->
+ <button class="btn wishlist-btn"
+onclick="toggleWishlist(this, 'boy3','2 Piece Organic Cotton Set', '$30', 'boy3.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+
+
+    <img src="boy3.jpg" class="card-img-top" alt="Baby Boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">2 Piece Organic Cotton Set</h5>
+      <p class="fw-bold text-muted">$30</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+       <button class="btn btn-outline-dark"
+onclick="addToCart('2 Piece Organic Cotton Set', '$30', 'boy3.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  <div class="row g-4 justify-content-center">
+  
+  <div class="col-md-3">
+  <div class="card position-relative product-card">
+
+    <!-- Wishlist Icon (Top Right) -->
+   <button class="btn wishlist-btn"
+onclick="toggleWishlist(this, 'boy4','Shirt And Shorts Set', '$38', 'boy4.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+
+    <img src="boy4.jpg" class="card-img-top" alt="Baby Boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">Shirt And Shorts Set</h5>
+      <p class="fw-bold text-muted">$38</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+        <button class="btn btn-outline-dark"
+onclick="addToCart('Shirt And Shorts Set', '$38', 'boy4.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  <div class="col-md-3">
+  <div class="card position-relative product-card">
+
+    <!-- Wishlist Icon (Top Right) -->
+  <button class="btn wishlist-btn"
+onclick="toggleWishlist(this, 'boy5','Romper Set', '$45', 'boy5.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+
+    <img src="boy5.jpg" class="card-img-top" alt="Baby Boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">Romper Set</h5>
+      <p class="fw-bold text-muted">$45</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+        <button class="btn btn-outline-dark"
+onclick="addToCart('Romper Set', '$45', 'boy5.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="col-md-3">
+  <div class="card position-relative product-card">
+
+    <!-- Wishlist Icon (Top Right) -->
+  <button class="btn wishlist-btn"
+onclick="toggleWishlist(this,'boy55','Brown Cotton Suit', '$30', 'boy55.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+
+
+    <img src="boy55.jpg" class="card-img-top" alt="Baby Boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">Brown Cotton Suit</h5>
+      <p class="fw-bold text-muted">$30</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+        <button class="btn btn-outline-dark"
+onclick="addToCart('Brown Cotton Suit', '$30', 'boy66.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+  <div class="row g-4 justify-content-center">
+  
+  <div class="col-md-3">
+  <div class="card position-relative product-card">
+
+    <!-- Wishlist Icon (Top Right) -->
+  <button class="btn wishlist-btn"
+onclick="toggleWishlist(this, 'boy7','Dungarees Overalla', '$36', 'boy7.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+    <img src="boy7.jpg" class="card-img-top" alt="Baby Boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">Dungarees Overalla</h5>
+      <p class="fw-bold text-muted">$36</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+        <button class="btn btn-outline-dark"
+onclick="addToCart('Dungarees Overalla', '$36', 'boy7.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  <div class="col-md-3">
+  <div class="card position-relative product-card">
+
+    <!-- Wishlist Icon (Top Right) -->
+   <button class="btn wishlist-btn"
+onclick="toggleWishlist(this, 'boy8','Knitted Romper', '$22', 'boy8.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+    <img src="boy8.jpg" class="card-img-top" alt="Baby Boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">Knitted Romper</h5>
+      <p class="fw-bold text-muted">$22</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+        <button class="btn btn-outline-dark"
+onclick="addToCart('Knitted Romper', '$22', 'boy8.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+  <div class="col-md-3">
+  <div class="card position-relative product-card">
+
+    <!-- Wishlist Icon (Top Right) -->
+   <button class="btn wishlist-btn"
+onclick="toggleWishlist(this,'boy9', 'Lovely Bear Polo Collar Romper', '$50', 'boy9.jpg')">
+  <i class="bi bi-heart"></i>
+</button>
+
+    <img src="boy9.jpg" class="card-img-top" alt="Baby Boy Dress">
+
+    <div class="card-body text-center">
+      <h5 class="card-title">Lovely Bear Polo Collar Romper</h5>
+      <p class="fw-bold text-muted">$50</p>
+
+      <div class="d-flex justify-content-center gap-2">
+        <a href="cart.html" class="btn btn-custom">Buy Now</a>
+        <button class="btn btn-outline-dark"
+onclick="addToCart('Lovely Bear Polo Collar Romper', '$50', 'boy9.jpg')">
+  <i class="bi bi-cart"></i>
+</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!--footer-->
+<div class="footer">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <div class="col-md-4 mb-4">
+        <h4 class="fw-bold">Baby Luxe</h4>
+        <p>Premium baby fashion, toys & essentials designed with love and comfort.</p>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark text-decoration-none">Home</a></li>
+          <li><a href="#about" class="text-dark text-decoration-none">About</a></li>
+          <li><a href="#collection" class="text-dark text-decoration-none">Collection</a></li>
+          <li><a href="Contact.html" class="text-dark text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Follow Us</h5>
+        <i class="bi bi-facebook fs-4 me-3"></i>
+        <i class="bi bi-instagram fs-4 me-3"></i>
+        <i class="bi bi-twitter fs-4"></i>
+      </div>
+
+    </div>
+
+    <hr class="bg-light">
+
+    <div class="text-center pt-3">
+      © 2026 Baby Luxe. All Rights Reserved | Crafted with care for little smiles.
+    </div>
+  </div>
+</div>
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  updateCounts();
+  markWishlistIcons();
+});
+
+// ---------------- UPDATE NAVBAR COUNT ----------------
+function updateCounts() {
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  document.getElementById("wishlist-count").innerText = wishlist.length;
+  document.getElementById("cart-count").innerText = cart.length;
+}
+
+// ---------------- TOGGLE WISHLIST ----------------
+function toggleWishlist(button, id, name, price, image) {
+
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  const icon = button.querySelector("i");
+
+  const index = wishlist.findIndex(item => item.id === id);
+
+  if (index !== -1) {
+    // Remove from wishlist
+    wishlist.splice(index, 1);
+    icon.classList.remove("bi-heart-fill");
+    icon.classList.add("bi-heart");
+    icon.style.color = "#ff6b9d";
+  } else {
+    // Add to wishlist
+    wishlist.push({ id, name, price, image });
+    icon.classList.remove("bi-heart");
+    icon.classList.add("bi-heart-fill");
+    icon.style.color = "red";
+  }
+
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  updateCounts();
+}
+
+// ---------------- ADD TO CART ----------------
+function addToCart(name, price, image) {
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.push({
+    name: name,
+    price: price,
+    image: image
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCounts();
+
+  alert("Added to Cart 🛒");
+}
+
+// -------- MARK HEART RED AFTER REFRESH --------
+function markWishlistIcons() {
+
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  document.querySelectorAll(".wishlist-btn").forEach(btn => {
+
+    const onclickAttr = btn.getAttribute("onclick");
+
+    // Extract ID (first parameter after "this,")
+    const id = onclickAttr.split("'")[1];
+
+    const icon = btn.querySelector("i");
+
+    if (wishlist.some(item => item.id === id)) {
+      icon.classList.remove("bi-heart");
+      icon.classList.add("bi-heart-fill");
+      icon.style.color = "red";
+    }
+  });
+}
+</script>
+</body>
+</html>
